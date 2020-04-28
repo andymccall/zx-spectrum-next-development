@@ -14,7 +14,7 @@ RED 			equ 2
 WHITE_INK_BLACK_PAPER	equ 7
 UPPER_SCREEN		equ 2
 
-COUNTER_VALUE_1		equ 10		; Change if you want
+COUNTER_VALUE_1		equ 5		; Change if you want
 
 ;-------------------------------
 
@@ -35,11 +35,55 @@ start:
 	call 5633			; Set the output channel for printing
 
 ;-------------------------------
-; Loop
+; Incremental loop
 ;-------------------------------
 
-	ld de,string 			; Address of string
- 	ld bc,eostr-string 		; Length of string to print
+	ld de,stringinc			; Address of string
+ 	ld bc,eostrinc-stringinc 	; Length of string to print
+ 	call 8252 			; Print the string
+
+ 	ld b, 0				; Clear the B register
+	ld c, COUNTER_VALUE_1		; Load COUNTER_VALUE_1 into the C register
+	call 11563      		; Push the BC registers onto the calculator stack
+     	call 11747      		; Output BC to the screen
+
+	ld a, 13			; Load new line into register A
+	rst 16				; Restart 16
+
+ 	ld b,0				; Put COUNTER_VALUE_1 into the B register
+
+increment:
+
+	inc b				; Increment B
+
+	ld a, b				; Load B into A
+
+	push bc				; Keep BC on the stack
+
+	ld b, 0				; Clear the B register
+	ld c, a				; Load A into the C register
+	call 11563      		; Push the BC registers onto the calculator stack
+     	call 11747      		; Output BC to the screen
+
+	ld a, 13			; Load the character + into register a
+	rst 16				; Restart 16
+
+     	pop bc				; Take BC back from the stack
+
+     	ld a, b
+     	cp COUNTER_VALUE_1
+
+     	jr nz, increment
+
+	ld a, 13			; Load new line into register A
+	rst 16				; Restart 16
+
+;-------------------------------
+; Decremental loop
+;-------------------------------
+
+	ld de,stringdec			; Address of string
+ 	ld bc,eostrdec-stringdec 	; Length of string to print
  	call 8252 			; Print the string
 
  	ld b, 0				; Clear the B register
@@ -52,15 +96,26 @@ start:
 
  	ld b,COUNTER_VALUE_1		; Put COUNTER_VALUE_1 into the B register
 
-countdown: 	
+decrement: 	
 
-	ld a, '.'			; Load . into register A
+	ld a, b				; Load B into A
+
+	push bc				; Keep BC on the stack
+
+	ld b, 0				; Clear the B register
+	ld c, a				; Load A into the C register
+	call 11563      		; Push the BC registers onto the calculator stack
+     	call 11747      		; Output BC to the screen
+
+	ld a, 13			; Load the character + into register a
 	rst 16				; Restart 16
 
-	ld a, 13			; Load new line into register A
+     	pop bc				; Take BC back from the stack
+
+	djnz decrement			; Decrement B, jump to decrement if B is not equal to 0
+
+	ld a, 13			; Load the character + into register a
 	rst 16				; Restart 16
-	
-	djnz countdown			; Decrement b, jump to countdown if B is not equal to 0
 
 	jp $				; Loop forever
 
@@ -68,8 +123,11 @@ countdown:
 ; Defines
 ;-------------------------------
 
-string defb 'Counting down from '
-eostr equ $
+stringinc defb 'Counting up to '
+eostrinc equ $
+
+stringdec defb 'Counting down from '
+eostrdec equ $
 
 ;-------------------------------
 
