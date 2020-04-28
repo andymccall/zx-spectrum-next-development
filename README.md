@@ -20,7 +20,7 @@ All available in the 32Mb image at (http://www.zxspectrumnext.online/cspect/)
 Place the following files in tools
 
 hdfmonkey.exe (https://github.com/gasman/hdfmonkey)
-sjasmplus.exe (http://sourceforge.net/projects/sjasmplus/)
+sjasmplus.exe (https://github.com/z00m128/sjasmplus)
 
 Place the following files in tools\CSpect
 
