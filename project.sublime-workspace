@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"in",
+				"increment"
+			],
+			[
 				"df",
 				"defb"
 			],
@@ -510,24 +514,11 @@
 			[
 				"moves",
 				"movesRemain"
-			],
-			[
-				"upda",
-				"updatePosition"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "src/Counter/Counter.asm",
-			"settings":
-			{
-				"buffer_size": 2254,
-				"encoding": "Cyrillic (Windows 1251)",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Packages/z80asm/z80asm.sublime-build",
 	"build_system_choices":
@@ -560,6 +551,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"T",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"TErmin",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"Pack",
+				"Package Control: List Packages"
+			],
 			[
 				"Ter",
 				"Terminus: Open Default Shell in Panel"
@@ -611,23 +614,22 @@
 	"expanded_folders":
 	[
 		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler",
-		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/build",
-		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/docs",
 		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src",
-		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Addition",
-		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Counter",
-		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/DisplayCharacter",
-		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/DisplayString",
 		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/tools"
 	],
 	"file_history":
 	[
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Counter/run.bat",
+		"/C/Users/andymccall/AppData/Roaming/Sublime Text 3/Packages/z80asm/README.md",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Counter/clean.bat",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Counter/Loops.asm",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Counter/make.bat",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/README.md",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/build/.gitignore",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Counter/Counter.asm",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/.gitignore",
 		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/DisplayCharacter/DisplayCharacter.asm",
 		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Addition/Addition.asm",
-		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Counter/Counter.asm",
-		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Counter/clean.bat",
-		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Counter/make.bat",
-		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Counter/run.bat",
 		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Addition/run.bat",
 		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Addition/clean.bat",
 		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Addition/make.bat",
@@ -744,16 +746,11 @@
 		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/LEVELS/Level05.asm",
 		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/LEVELS/Level04.asm",
 		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/LEVELS/Level03.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/BANKDATA/AudioData2.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/BANKDATA/AudioDataGameMusic.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/AUDIO/VT1-mfx.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/BANKDATA/MainDefines.def",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/MainDefines.def",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/BANKDATA/AudioDataDefines.def"
+		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/BANKDATA/AudioData2.asm"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -768,6 +765,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Counter",
 			"Addition",
 			"ChangeScreenColour",
 			"DisplayString",
@@ -894,8 +892,7 @@
 			"jp",
 			"bit",
 			"_HIGH_TEST",
-			"CreditScreenLine",
-			"CreditCurrentLine"
+			"CreditScreenLine"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -903,6 +900,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Loops",
 			"Counter",
 			"Addition",
 			"ChangeScreenColour",
@@ -976,37 +974,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "src/Counter/Counter.asm",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2254,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1702,
-								1702
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/z80asm/z80asm.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 666.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

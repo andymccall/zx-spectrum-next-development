@@ -1,10 +1,10 @@
 ;-------------------------------
-; 005 - Counter
+; 005 - Loops
 ;-------------------------------
 
 	device zxspectrumnext
 
-	cspectmap "Counter.map"
+	cspectmap "Loops.map"
 
 	org $8000
 
@@ -136,7 +136,7 @@ eostrdec equ $
 	DISPLAY ">------------- Code Space Remaining = ",/D,$c000-$
 
 	; write everything into NEX file
-	savenex open "Counter.nex", start, $ff40
+	savenex open "Loops.nex", start, $ff40
 	savenex core 2, 0, 0        ; Next core 2.0.0 required as minimum
 	savenex cfg 7,0,0,0
 	savenex auto
