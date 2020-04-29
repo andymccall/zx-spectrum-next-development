@@ -33,32 +33,42 @@ start:
 		call 5633				; Set the output channel for printing
 
 ;-------------------------------
-; Propmpt for input
+; Propmpt for a key press
 ;-------------------------------
 
 		ld de,stringpressakey 			; Address of string
  		ld bc,eostrpressakey-stringpressakey	; Length of string to print
  		call 8252 				; Print the string
 
-keypress	call 654				; fetch keypress status
-		inc e					; ???????? WHY do we need to increment e?
-		jr z,keypress          			; yes, so no key pressed.
-
+outerloop:
 		ld a, 13				; Load new line into register A
-		rst 16					; Restart 16
+		call 16					; Restart 16
+
+keypress:	call 654				; Fetch keypress status (https://skoolkid.github.io/rom/asm/028E.html)
+
+		ld a, e					; Call 654 sets E to 00 - 27 if a key has been pressed and FF if no key
+		cp $FF					; has been pressed, so we move E to A then compare it to FF if the compare
+							; is equal, the zero flag is set
+
+		jr z, keypress         			; Jump to keypress if z is zero, meaning no key was pressed
 
 		ld de,stringcontinue 			; Address of string
  		ld bc,eostrcontinue-stringcontinue 	; Length of string to print
  		call 8252 				; Print the string
 
-		jp $					; Loop forever
+keylift:	call 654				; Do the same again, but wait for the key to be lifted
+		ld a, e
+		cp $FF
+		jr nz, keylift				; We want the compare to set the zero flag
+
+		jp outerloop				; Loop forever
 
 ;-------------------------------
 
-stringpressakey defb 'Press any key to continue...'	; The string to print
+stringpressakey defb 'Press any key...'			; The string to print
 eostrpressakey 	equ $					;
 
-stringcontinue 	defb 'Continuing!'			; The string to print
+stringcontinue 	defb 'Key press detected!'		; The string to print
 eostrcontinue 	equ $	
 
 ;-------------------------------

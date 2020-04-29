@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"ke",
+				"keylift"
+			],
+			[
+				"out",
+				"outerloop"
+			],
+			[
 				"in",
 				"increment"
 			],
@@ -506,19 +514,29 @@
 			[
 				"RepW",
 				"RepWaveNumber"
-			],
-			[
-				"Initi",
-				"InitialiseWavesFromOffset"
-			],
-			[
-				"moves",
-				"movesRemain"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "src/Scrolling/Scrolling.asm",
+			"settings":
+			{
+				"buffer_size": 587,
+				"encoding": "Cyrillic (Windows 1251)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Graphics/Graphics.asm",
+			"settings":
+			{
+				"buffer_size": 3152,
+				"encoding": "Cyrillic (Windows 1251)",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Packages/z80asm/z80asm.sublime-build",
 	"build_system_choices":
@@ -556,16 +574,16 @@
 				"Terminus: Open Default Shell in Panel"
 			],
 			[
+				"Ter",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
 				"TErmin",
 				"Terminus: Open Default Shell in Panel"
 			],
 			[
 				"Pack",
 				"Package Control: List Packages"
-			],
-			[
-				"Ter",
-				"Terminus: Open Default Shell in Panel"
 			],
 			[
 				"Terminus: Open Default Shell in ",
@@ -614,11 +632,26 @@
 	"expanded_folders":
 	[
 		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/build",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/build/Graphics",
 		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Graphics",
 		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/tools"
 	],
 	"file_history":
 	[
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Input/Input.asm",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Scrolling/clean.bat",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Scrolling/make.bat",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Scrolling/run.bat",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Scrolling/Scrolling.asm",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Graphics/clean.bat",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Graphics/Graphics.asm",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Graphics/make.bat",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Graphics/run.bat",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Input/clean.bat",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Input/run.bat",
+		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Input/make.bat",
 		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Counter/run.bat",
 		"/C/Users/andymccall/AppData/Roaming/Sublime Text 3/Packages/z80asm/README.md",
 		"/C/Users/andymccall/Documents/ZX Spectrum Next Assembler/src/Counter/clean.bat",
@@ -734,19 +767,7 @@
 		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/Mothership.asm",
 		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/GameOver.asm",
 		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/LEVELS/Level02.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/BANKDATA/ImageData.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/AUDIO/AfxPlayer.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/LEVELS/Level08.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/LEVELS/Level09.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/LEVELS/Level10.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/LEVELS/Level11.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/LEVELS/Level12.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/LEVELS/Level07.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/LEVELS/Level06.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/LEVELS/Level05.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/LEVELS/Level04.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/LEVELS/Level03.asm",
-		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/BANKDATA/AudioData2.asm"
+		"/C/Users/michaelware/Documents/ZXNext/WarhawkNext/BANKDATA/ImageData.asm"
 	],
 	"find":
 	{
@@ -765,6 +786,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ChangeScreenColour",
+			"Input",
+			"DisplayString",
 			"Counter",
 			"Addition",
 			"ChangeScreenColour",
@@ -889,10 +913,7 @@
 			"GetSpareAlienHighPriority",
 			"FindSpareBullet",
 			"find",
-			"jp",
-			"bit",
-			"_HIGH_TEST",
-			"CreditScreenLine"
+			"jp"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -900,6 +921,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Graphics",
+			"Scrolling",
+			"Input",
 			"Loops",
 			"Counter",
 			"Addition",
@@ -974,8 +998,68 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/Scrolling/Scrolling.asm",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 587,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								183,
+								183
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/z80asm/z80asm.tmLanguage",
+							"tab_size": 7,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/Graphics/Graphics.asm",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1573,
+								1573
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/z80asm/z80asm.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
