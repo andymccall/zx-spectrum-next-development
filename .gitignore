@@ -1,4 +1,27 @@
-# Don't upload image files
-build/*
-images/*
-tools/*
+
+# Commander X16
+*.elf
+*.PRG
+*.prg
+*.list
+*.lst
+lst
+bin
+obj
+
+# NEO6502
+*.neo
+storage
+*.dump
+
+# Agon Light 2
+bin
+obj
+
+# ZX Spectrum Next
+sld
+
+# Misc
+.DS_Store
+.idea
+.vscode
